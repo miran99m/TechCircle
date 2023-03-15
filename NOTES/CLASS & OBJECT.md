@@ -1,34 +1,70 @@
-CLASS & OBJECT
 
-- A class is a blueprint for creating objects, while an object is an instance of a class.
+What is Polymorphism?
+EXAMPLE:
+Think of different types of vehicles such as cars, bikes, and buses. All of these vehicles have a common method of transportation, which is to move from one place to another. However, they do so in different ways, using different methods of propulsion.
 
-- A class can have one or more fields or variables, which are used to store data, and methods, which are used to perform actions or operations.
+For example, cars use internal combustion engines or electric motors, while bikes use pedals and muscles, and buses use diesel engines or electric motors. Despite their different methods of propulsion, all vehicles have a common method of transportation, which is an example of polymorphism.
 
-- To create an object, you need to use the new keyword followed by the class name and any arguments required by the constructor.
-
-- Each object created from a class has its own set of instance variables and can call its own set of methods.
-
-- Classes can be organized into packages, which help to group related classes together.
+In this scenario, the different types of vehicles are the subclasses, and the method of transportation is the common method that they all share, which allows them to respond to the same message (move from one place to another) in different ways.
 
 
-ACCESS MODIFER
-- Java has four access modifiers: public, protected, default (also known as package-private), and private.
-- can be used to control the visibility and accessibility of class members.
-The public access modifier makes a class member accessible from anywhere in the program. It can be accessed by other classes, packages, and even outside the application.
-
-The protected access modifier makes a class member accessible to the same class, its subclasses, and classes in the same package.
-
-The default (package-private) access modifier makes a class member accessible only within the same package. It is not accessible outside the package.
-
-The private access modifier makes a class member accessible only within the same class. It is not accessible outside the class.
 
 
-ENCAPSULATION
 
-Encapsulation is a mechanism of wrapping data and code into a single unit, which is known as a class.
+OverRiding
 
-The main purpose of encapsulation is to protect the data from outside interference and misuse.
+Method overriding is a feature of Java's inheritance mechanism.
 
-Encapsulation provides a way to hide the implementation details of an object from the outside world and only expose what is necessary.
+To override a method, the method in the subclass must have the same name, return type, and parameter list as the method in the parent class.
 
-Public methods are used to access and modify private data members of a class. These methods are also called getters and setters.
+The access level of the overridden method in the subclass cannot be more restrictive than the access level of the same method in the parent class.For example, if the parent class's method is public, then the subclass's method cannot be private or protected.
+
+The @Override annotation can be used to indicate that a method is intended to override a method in the parent class. This annotation is optional but can help catch errors during compilation if the method is not correctly overridden.
+
+
+
+OverLoading!!!
+The method must have the same name as another method in the class.
+
+The method must have different parameters than the other method(s) with the same name.
+
+The parameters must differ in one of the following ways:
+1-Number of parameters
+2-Data type of the parameters
+3-Order of the parameters
+
+
+
+Task OverRide
+
+- Create a parent class called "Vehicle" 
+two methods: startEngine() and stopEngine()
+
+		 - The startEngine() method should print a message indicating that 
+		 "the engine of the vehicle is starting."
+
+		 - The stopEngine() method should print a message indicating that 
+		 "the engine of the vehicle is stopping."
+
+-Create two subclasses called "Car" and "Motorcycle" that extend the "Vehicle" class.
+
+-Override the startEngine() and stopEngine() methods for each subclass to print messages that are specific to cars and motorcycles. 
+
+For example: 
+-the startEngine() method for the "Car" class could print a message like 
+"Starting the engine of the car..."
+
+-the startEngine() method for the "Motorcycle" class could print a message like
+ "Starting the engine of the motorcycle...".
+
+Create a main method that creates objects of the "Car" and "Motorcycle" classes and calls their "startEngine()" and "stopEngine()" methods.
+
+Print the output to the console to demonstrate that the methods are working correctly.
+
+
+
+
+
+
+
+
