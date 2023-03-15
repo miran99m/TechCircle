@@ -10,4 +10,25 @@ CLASS & OBJECT
 
 - Classes can be organized into packages, which help to group related classes together.
 
-- Access modifiers (public, private, protected) can be used to control the visibility and accessibility of class members.
+
+ACCESS MODIFER
+- Java has four access modifiers: public, protected, default (also known as package-private), and private.
+- can be used to control the visibility and accessibility of class members.
+The public access modifier makes a class member accessible from anywhere in the program. It can be accessed by other classes, packages, and even outside the application.
+
+The protected access modifier makes a class member accessible to the same class, its subclasses, and classes in the same package.
+
+The default (package-private) access modifier makes a class member accessible only within the same package. It is not accessible outside the package.
+
+The private access modifier makes a class member accessible only within the same class. It is not accessible outside the class.
+
+
+ENCAPSULATION
+
+Encapsulation is a mechanism of wrapping data and code into a single unit, which is known as a class.
+
+The main purpose of encapsulation is to protect the data from outside interference and misuse.
+
+Encapsulation provides a way to hide the implementation details of an object from the outside world and only expose what is necessary.
+
+Public methods are used to access and modify private data members of a class. These methods are also called getters and setters.
